@@ -1,0 +1,53 @@
+Git é um sistema de versionamento de código distribuido. Ajuda gente a criar e monitorar diferentes vesões do código no nosso dispositivo.
+
+--> Comandos básicos Git:
+- dir (windows) (listar os diretorios na pasta em que está); ls (linux)
+- cd <pasta> (vai para a pasta); cd .. (volta para pasta anterior)
+- cls (windows) (limpa a tela); clear (linux); CTRL L (os dois)
+- tab (auto completa nomes)
+- mkdir (cria pastas)
+OBS: se tudo der certo, o terminal não retorna nada *Silence for success*
+- del (deleta arquivos)
+- rmdir (deleta diretorios); rm-rf (linux)
+- echo XX (devolve o digitado)
+- ex: echo hello > hello.txt (cria arquivo)
+
+--> Como o Git funciona debaixo dos panos
+- SHA1: secure hash algorithm (identifica os arquivos de forma segura, rapida e curta)
+- Objetos internos do Git:
+1. Blobs (metadados que o git guarda + guarda o SHA1)
+2. Trees (armazena os blobs, guarda o nome do arquivo e tem SHA1)
+3. Commits (aponta para arvore, para o ultimo commit antes dele (parente), para o autor (quem faz) e mensagem (significado dos arquivos/pasta). A Tree tem time stamp (data e hora de criação) e também tem SHA1
+*Se 1 mudar, tudo muda*
+
+--> Chaves SSH e Tokens
+- aguardo de anotaçoes
+
+--> Primeiros comandos com o Git
+- git init (cria repositorio)
+- git add (cria o versionamento)
+- git commit (commita um item)
+- dir -a (lista gits ocultos)
+
+*Arquivo markdown: forma + humana de escrever arquivo HTML (estrutura basica de qualquer pagina da web)*
+
+--> Ciclo de vida dos arquivos
+- tracked (se conhece) --> modified ou unmodified --> vão para STAGED se preparar para virar commit
+- untracked (não se conhece)
+
+--> Ambiente de desenvolvimento
+- working directory: onde se trabalha agora
+- staging area: onde estão se preparando para ser commit
+- local repository: onde ficam localmente apos ser commitado (Isso tudo é um ciclo)
+- local repository para remote repository --> git status (monitora o status dos arquivos) --> git add * (adiciona todas as modificações)
+*mv (move os arquivos)*
+
+--> Trabalhando com o GitHub
+1. git config --global --unset user.email (reseta email)
+2. git config --global -- unset user.name (reseta name)
+3. git config --global user.email <coloca email da conta do github>
+4. git config --global user.name <coloca nome da conta do github>
+ADICIONA NO REMOTO: 
+1. git add -a
+2. git commit "mensagem"
+3. git push <nome de onde tá>
